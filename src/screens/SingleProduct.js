@@ -22,12 +22,7 @@ export default function SingleProductScreen() {
   };
 
   useEffect(() => {
-    //   axios.get(`http://localhost:3000/products/getProductById/${prodId.id}`)
-
-    //   .then((res) => setProduct(res))
-    //   .catch((err) => {
-    //    console.log(err.message);
-    //  });
+    
 
     try {
       fetch(`http://localhost:3000/products/getProductById/${prodId.id}`)

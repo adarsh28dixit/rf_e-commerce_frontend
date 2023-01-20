@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function SingleProduct({ val, onClick }) {
   const navigate = useNavigate();
+  const[selectedSize, setSelectedSize] = useState([])
 
   const goBack = () => {
     navigate(-1);
   };
+
+  const handleSelectSize = (size) => {
+    if(selectedSize.includes(size)){
+      setSelectedSize(selectedSize.filter((f) => f !== size))
+    }else{
+      setSelectedSize([...selectedSize, size])
+    }
+  }
   return (
     <div className="single-product-col">
       <header>
@@ -17,7 +26,7 @@ export default function SingleProduct({ val, onClick }) {
 
       <div className="single-product-main">
         <div className="col-1">
-          <img src={val.image} alt="" />
+          <img src={val.image} alt="" style={{height: '60%'}} />
           <div>
             {" "}
             Rate product{" "}
@@ -28,11 +37,14 @@ export default function SingleProduct({ val, onClick }) {
               <i className="fa fa-star-o"></i>
             </span>
           </div>
+          <button type="submit" className="share-btn">
+            share design
+          </button>
         </div>
         <div className="col-2">
-          <img src={val.image} alt="" />
-          <img src={val.image} alt="" />
-          <img src={val.image} alt="" />
+          <img src={val.image} alt="" style={{height: '18%'}} />
+          <img src={val.image} alt="" style={{height: '18%'}}/>
+          <img src={val.image} alt="" style={{height: '18%'}}/>
           <div>
             <button
               type="submit"
@@ -44,7 +56,7 @@ export default function SingleProduct({ val, onClick }) {
           </div>
         </div>
         <div className="col-3">
-          <strong>{val.name}</strong>
+          <strong className="prod-name">{val.name}</strong>
           <div>{val.description}</div>
           <p>
             <span style={{ color: "hsl(41, 97%, 51%)" }}>
@@ -59,8 +71,9 @@ export default function SingleProduct({ val, onClick }) {
             <strong>Rs. {val.price}/-</strong>
             <div>Get an exclusive 20% off with HDFC card</div>
           </p>
-          <div className="front-info">
-            Front{" "}
+          <div className="front-info" >
+            <div style={{ width: '30%'}}>Front{" "}</div>
+            
             <span>
               <input type="checkbox" className="black-front" />
               <input type="checkbox" className="blue-front" />
@@ -68,7 +81,7 @@ export default function SingleProduct({ val, onClick }) {
             </span>
           </div>
           <div className="front-info">
-            Middle{" "}
+          <div style={{ width: '30%'}}>Middle{" "}</div>
             <span>
               <input type="checkbox" className="black-front" />
               <input type="checkbox" className="blue-front" />
@@ -76,7 +89,7 @@ export default function SingleProduct({ val, onClick }) {
             </span>
           </div>
           <div className="front-info">
-            Back{" "}
+          <div style={{ width: '30%'}}>Back{" "}</div>
             <span>
               <input type="checkbox" className="black-front" />
               <input type="checkbox" className="blue-front" />
@@ -84,23 +97,20 @@ export default function SingleProduct({ val, onClick }) {
             </span>
           </div>
           <div className="sole-info">
-            Sole{" "}
+          <div style={{ width: '30%'}}>Sole{" "}</div>
             <span>
-            <input type="checkbox" className="black-front" />
+              <input type="checkbox" className="black-front" />
               <input type="checkbox" className="blue-front" />
               <input type="checkbox" className="grey-front" />
             </span>
           </div>
-          <div className="size-info">
-            Size{" "}
+          <div className="sole-info">
+          <div style={{ width: '30%'}}>Size{" "}</div>
             <span>
-              <input
-                type="checkbox"
-                className="black-sole"
-                placeholder=""
-              />
-              <input type="checkbox" className="blue-sole" />
-              <input type="checkbox" className="grey-sole" />
+              
+              <input type="checkbox" className="size-7" onChange={() => handleSelectSize("7")} />
+              <input type="checkbox" className="size-8" onChange={() => handleSelectSize("8")}/>
+              <input type="checkbox" className="size-9" onChange={() => handleSelectSize("9")}/>
             </span>
           </div>
           <div>
@@ -113,56 +123,6 @@ export default function SingleProduct({ val, onClick }) {
             </button>
           </div>
         </div>
-        {/* {val.map((i) => {
-          return (
-            <>
-              <div className="col-1">
-                <img src={i.image} alt="" />
-                <div> Rate product ########</div>
-              </div>
-              <div className="col-2">
-                <img src={i.image} alt="" />
-                <img src={i.image} alt="" />
-                <img src={i.image} alt="" />
-                <div style={{ position: "absolute", bottom: "0px" }}>
-                  <button type="submit" onClick={() => onClick(i.id)}>Add to cart</button>
-                </div>
-              </div>
-              <div className="col-3">
-                <strong>{i.name}</strong>
-                <div>{i.description}</div>
-                <p>
-                  <span>#########</span>
-                  <div>{i.reviews} reviews</div>
-                </p>
-                <p>
-                  <strong>Rs. {i.price}/-</strong>
-                  <div>Get an exclusive 20% off with HDFC card</div>
-                </p>
-                <div className="sole-info">
-                  Sole{" "}
-                  <span>
-                    <input type="checkbox" className="black-sole" />
-                    <input type="checkbox" className="blue-sole" />
-                    <input type="checkbox" className="grey-sole" />
-                  </span>
-                </div>
-                <div className="size-info">
-                  Size{" "}
-                  <span>
-                    <input
-                      type="checkbox"
-                      className="black-sole"
-                      style={{ content: "7" }}
-                    />
-                    <input type="checkbox" className="blue-sole" />
-                    <input type="checkbox" className="grey-sole" />
-                  </span>
-                </div>
-              </div>
-            </>
-          );
-        })} */}
       </div>
     </div>
   );

@@ -313,41 +313,57 @@ header {
 
 /* cart component */
 .cart-col {
-  width: 20%;
+  width: 25%;
   min-height: 500px;
   /* border: 2px solid black; */
   margin: 1rem 1rem;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
+.cart-main {
+  width: 80%;
+  margin: auto;
+}
+
 .empty-cart-text {
   text-align: center;
 }
 .cart-items {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0.5rem 0px;
 }
 .cart-item-image {
   width: 30%;
 }
+.cart-items-info {
+  margin: 0px 1rem;
+}
+.cart-items-info > div {
+  font-size: 0.9rem;
+}
 .cart-bottom {
-  position: relative;
-  bottom: 10px;
-  /* color: hsl(41, 97%, 51%); */
+  position: absolute;
+  bottom: 12%;
+  margin: 0px .5rem;
 }
 .cart-bottom button {
-  margin: 0px 5rem;
+  width: fit-content;
+
   background-color: rgb(96, 94, 94);
   color: aliceblue;
+  margin-left: 7rem;
+  padding: 0.5rem;
 }
 
 @media screen and (max-width: 800px) {
   .cart-col {
     display: none;
+   
   }
 }
+
 
 /* store screeen*/
 .store-screen {
@@ -389,7 +405,18 @@ header {
   width: 30%;
 }
 .sole-info {
-  align-items: center;
+ 
+  display: flex;
+  flex-direction: row;
+}
+.prod-name{
+  font-size: 2rem;
+  font-weight: 400;
+}
+.front-info{
+  display: flex;
+  flex-direction: row;
+ 
 }
 .black-front {
   -webkit-appearance: none;
@@ -407,6 +434,7 @@ header {
   background-color: #bdc3c7;
 }
 .blue-front {
+ 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -436,13 +464,47 @@ header {
   height: 2rem;
   background-color: #bdc3c7;
 }
+
+.size-7::before{
+  content: "7";
+ font-size: 20px;
+ margin-left: .5rem;
+ margin-top: .4rem;
+ position: absolute;
+}
+.size-8::after{
+  content: "8";
+  font-size: 20px;
+ margin-left: .5rem;
+ margin-top: .4rem;
+ position: absolute;
+}
+.size-9::after{
+  content: "9";
+  font-size: 20px;
+ margin-left: .5rem;
+ margin-top: .4rem;
+ position: absolute;
+}
 .col-3 input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
+ 
   accent-color: rgb(220, 210, 210);
+} */
+.share-btn {
+  float: right;
+  margin-top: 5.8rem;
+  padding: 0.3rem;
+}
+.addToCardBut-l {
+  margin-top: 3rem;
+  padding: 0.3rem;
+  background-color: #131314;
+  color: antiquewhite;
 }
 .addToCardBut-s {
   display: none;
@@ -539,6 +601,7 @@ input[type="checkbox"] {
 }
 .team-member-card {
   width: 15%;
+  height: 300px;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
@@ -548,11 +611,11 @@ input[type="checkbox"] {
 .team-member-card-icon img {
   width: 10%;
   margin: 0.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
 }
 .team-member-card-text {
   text-align: center;
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
   margin-bottom: 1rem;
 }
 .team-footer {
@@ -579,7 +642,6 @@ input[type="checkbox"] {
 .journey-screen img {
   width: 100%;
   height: 400px;
- 
 }
 .journey-main {
   width: 80%;
@@ -588,10 +650,10 @@ input[type="checkbox"] {
   height: auto;
   position: absolute;
 }
-.journey-text{
+.journey-text {
   margin: 0rem 4rem;
 }
-.journey-text div{
+.journey-text div {
   margin: 2rem 0rem;
 }
 

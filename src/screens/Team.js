@@ -12,6 +12,7 @@ export default function Team() {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtI5sTI2g8GJx_RrUZ0s3cb6N7ZMiGvVUxmYbrQ6SaGF-TY6kfJ1sTEHpOcYz0SvxjYQ&usqp=CAU"
             alt=""
+            style={{height: '50%'}}
           />
           <div className="team-member-card-text">
             <strong>Zidane</strong>
@@ -36,11 +37,12 @@ export default function Team() {
 
         <div className="team-member-card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtI5sTI2g8GJx_RrUZ0s3cb6N7ZMiGvVUxmYbrQ6SaGF-TY6kfJ1sTEHpOcYz0SvxjYQ&usqp=CAU"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYyvgNOuaFv1afd_B0f4fyXsz9_4Q4T8WsH2pxAZRnQPyVIK1NETTxz7vj5lmhUioHIUE&usqp=CAU"
             alt=""
+            style={{height: "50%"}}
           />
           <div className="team-member-card-text">
-            <strong>Zidane</strong>
+            <strong>Toni Kroos</strong>
             <br />
             <span>Leadership & Management</span>
             <div className="team-member-card-icon">
@@ -62,11 +64,12 @@ export default function Team() {
 
         <div className="team-member-card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtI5sTI2g8GJx_RrUZ0s3cb6N7ZMiGvVUxmYbrQ6SaGF-TY6kfJ1sTEHpOcYz0SvxjYQ&usqp=CAU"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5fvPJBtFBUSlmzI2Fe9fm2g0cc8fqhoBrcQ&usqp=CAU"
             alt=""
+            style={{height: '50%'}}
           />
           <div className="team-member-card-text">
-            <strong>Zidane</strong>
+            <strong>Iker Casillas</strong>
             <br />
             <span>Leadership & Management</span>
             <div className="team-member-card-icon">
@@ -88,11 +91,12 @@ export default function Team() {
 
         <div className="team-member-card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtI5sTI2g8GJx_RrUZ0s3cb6N7ZMiGvVUxmYbrQ6SaGF-TY6kfJ1sTEHpOcYz0SvxjYQ&usqp=CAU"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvNi7WGgKNSe6CBaAbgOVvK2xo2WcLWTx59g&usqp=CAU"
             alt=""
+            style={{height: '50%'}}
           />
           <div className="team-member-card-text">
-            <strong>Zidane</strong>
+            <strong>James</strong>
             <br />
             <span>Leadership & Management</span>
             <div className="team-member-card-icon">
@@ -114,11 +118,12 @@ export default function Team() {
 
         <div className="team-member-card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHtI5sTI2g8GJx_RrUZ0s3cb6N7ZMiGvVUxmYbrQ6SaGF-TY6kfJ1sTEHpOcYz0SvxjYQ&usqp=CAU"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7yfIXtU1hXE9FiyYNLQTrq-iuotEwU8ze4A&usqp=CAU"
             alt=""
+            style={{height: '50%'}}
           />
           <div className="team-member-card-text">
-            <strong>Zidane</strong>
+            <strong>Christiano</strong>
             <br />
             <span>Leadership & Management</span>
             <div className="team-member-card-icon">

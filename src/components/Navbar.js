@@ -72,11 +72,11 @@ export default function Navbar() {
                 CONTACT{" "}
               </Link>
             </div>
-            <div>
+            {/* <div>
               <Link to="/cart" className="nav-link">
               <i className="fa fa-shopping-cart"></i> {" "}
               </Link>
-            </div>
+            </div> */}
           </Menu>
         </div>
       </div>

@@ -45,9 +45,9 @@ export default function Filters({
         <div className="filter-cost">
           <p>Color</p>
           <span className="color-checkbox">
-            <input type="checkbox" className="color-black" onClick={() => handleColorCheckboxClick("black")}/>
+            <input type="checkbox" className="color-black"  onChange={() => handleColorCheckboxClick("black")}/>
 
-            <input type="checkbox" className="color-red" onClick={() => handleColorCheckboxClick("red")} />
+            <input type="checkbox" className="color-red" onChange={() => handleColorCheckboxClick("red")} />
 
             
           </span>
